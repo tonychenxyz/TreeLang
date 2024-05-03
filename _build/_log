@@ -1,0 +1,46 @@
+### Starting build.
+# Target: treelang.ml.depends, tags: { extension:ml, file:treelang.ml, ocaml, ocamldep, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamldep.opt -modules treelang.ml > treelang.ml.depends # cached
+# Target: ast.ml.depends, tags: { extension:ml, file:ast.ml, ocaml, ocamldep, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamldep.opt -modules ast.ml > ast.ml.depends # cached
+# Target: ast.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ast.cmo, file:ast.ml, implem, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlc.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o ast.cmo ast.ml # cached
+# Target: sast.ml.depends, tags: { extension:ml, file:sast.ml, ocaml, ocamldep, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamldep.opt -modules sast.ml > sast.ml.depends # cached
+# Target: sast.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:sast.cmo, file:sast.ml, implem, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlc.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o sast.cmo sast.ml # cached
+# Target: scanner.mll, tags: { extension:mll, file:scanner.mll, lexer, ocaml, ocamllex, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamllex.opt -q scanner.mll # cached
+# Target: scanner.ml.depends, tags: { extension:ml, file:scanner.ml, ocaml, ocamldep, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamldep.opt -modules scanner.ml > scanner.ml.depends # cached
+# Target: treelangparse.mly, tags: { extension:mly, file:treelangparse.mly, infer, ocaml, ocamlyacc, parser, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlyacc treelangparse.mly # cached
+# Target: treelangparse.mli.depends, tags: { extension:mli, file:treelangparse.mli, ocaml, ocamldep, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamldep.opt -modules treelangparse.mli > treelangparse.mli.depends # cached
+# Target: treelangparse.cmi, tags: { byte, compile, extension:mli, file:treelangparse.mli, interf, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlc.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o treelangparse.cmi treelangparse.mli # cached
+# Target: scanner.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:scanner.cmo, file:scanner.ml, implem, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlc.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o scanner.cmo scanner.ml # cached
+# Target: semant.ml.depends, tags: { extension:ml, file:semant.ml, ocaml, ocamldep, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamldep.opt -modules semant.ml > semant.ml.depends # cached
+# Target: semant.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:semant.cmo, file:semant.ml, implem, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlc.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o semant.cmo semant.ml # cached
+# Target: treelang.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:treelang.cmo, file:treelang.ml, implem, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlc.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o treelang.cmo treelang.ml # cached
+# Target: ast.cmx, tags: { compile, extension:cmx, extension:ml, file:ast.cmx, file:ast.ml, implem, native, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlopt.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o ast.cmx ast.ml # cached
+# Target: sast.cmx, tags: { compile, extension:cmx, extension:ml, file:sast.cmx, file:sast.ml, implem, native, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlopt.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o sast.cmx sast.ml # cached
+# Target: treelangparse.ml.depends, tags: { extension:ml, file:treelangparse.ml, ocaml, ocamldep, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamldep.opt -modules treelangparse.ml > treelangparse.ml.depends # cached
+# Target: treelangparse.cmx, tags: { compile, extension:cmx, extension:ml, file:treelangparse.cmx, file:treelangparse.ml, implem, native, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlopt.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o treelangparse.cmx treelangparse.ml # cached
+# Target: scanner.cmx, tags: { compile, extension:cmx, extension:ml, file:scanner.cmx, file:scanner.ml, implem, native, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlopt.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o scanner.cmx scanner.ml # cached
+# Target: semant.cmx, tags: { compile, extension:cmx, extension:ml, file:semant.cmx, file:semant.ml, implem, native, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlopt.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o semant.cmx semant.ml # cached
+# Target: treelang.cmx, tags: { compile, extension:cmx, extension:ml, file:treelang.cmx, file:treelang.ml, implem, native, ocaml, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlopt.opt -c -I /Users/tonychen.xyz/.opam/default/lib/llvm -o treelang.cmx treelang.ml # cached
+# Target: treelang.native, tags: { dont_link_with, extension:native, file:treelang.native, link, native, ocaml, program, quiet, traverse }
+/Users/tonychen.xyz/.opam/default/bin/ocamlopt.opt -I /Users/tonychen.xyz/.opam/default/lib/llvm /Users/tonychen.xyz/.opam/default/lib/llvm/shared/llvm.cmxa ast.cmx sast.cmx treelangparse.cmx scanner.cmx semant.cmx treelang.cmx -o treelang.native # cached
+# Compilation successful.
